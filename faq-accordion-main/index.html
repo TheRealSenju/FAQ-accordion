@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <link rel="stylesheet" href="./design/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="body">
+  
+    <img class="img-bg" src="./assets/images/background-pattern-desktop.svg" alt="background-img">
+     <div class="faq-box">
+      <img class="icons star" src="./assets/images/icon-star.svg" alt="">
+       <h1 class="text header">FAQs</h1>
+        <p class="text para1 paragraph">What is Frontend Mentor, and how will it help me?</p><img class ="icons plus" id="plus1" onclick="giveAns1()"src="./assets/images/icon-plus.svg" alt="">
+        <p class="text ans"  id="ans1"></p><hr>
+        <p class="text paragraph ">Is Frontend mentor free?</p><img class ="icons plus" onclick="giveAns2()" id="plus2" src="./assets/images/icon-plus.svg" alt="">
+        <p class="text ans"  id="ans2"></p><hr>
+        <p class="text paragraph ">Can I use Frontend Mentor projects in my portfolio?</p><img class ="icons plus" id="plus3" onclick="giveAns3()" src="./assets/images/icon-plus.svg" alt="">
+        <p class="text ans "  id="ans3"></p><hr>
+        <p class="text paragraph ">How can I get help if I'm stuck on a challenge?</p><img class ="icons plus" id="plus4" onclick="giveAns4()" src="./assets/images/icon-plus.svg" alt="">
+        <p class="text ans "  id="ans4"></p>
+        
+        <footer> Challenge by <a href="https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz/hub">Frontend Mentor</a>. Solved by Clarence </footer>
+
+    </div>
+
+    
+  </div>
+  <script>
+        let counter = 0
+    function giveAns1() {
+      counter++
+      if (counter % 2 !== 0) {
+        document.getElementById("plus1").src = "./assets/images/icon-minus.svg"
+        document.getElementById("ans1").innerHTML = ' Frontend mentor offers realistic coding challenges to help developers improve their coding skills with projects in HTML , CSS and JavaScript.It is suitable for all levels of learning and suitable for portfolio building';
+      } else {
+        document.getElementById("plus1").src = "./assets/images/icon-plus.svg"
+        document.getElementById("ans1").innerHTML = ' '
+      }
+    }
+    function giveAns2() {
+      counter++
+      if (counter % 2 !== 0) {
+        document.getElementById("plus2").src = "./assets/images/icon-minus.svg"
+        document.getElementById("ans2").innerHTML = 'Yes , Frontend Mentor offers free challenges to all its members but there are some premium challenges which are exclusive to paid members'
+      } else {
+        document.getElementById("plus2").src = "./assets/images/icon-plus.svg"
+        document.getElementById("ans2").innerHTML = ' '
+      }
+    }
+    function giveAns3() {
+      counter++
+      if (counter % 2 !== 0) {
+        document.getElementById("plus3").src = "./assets/images/icon-minus.svg"
+        document.getElementById("ans3").innerHTML = 'Yes, Frontend Mentor projects can be added to your portfolio in order to show off your skillset to potential employers'
+      } else {
+        document.getElementById("plus3").src = "./assets/images/icon-plus.svg"
+        document.getElementById("ans3").innerHTML = ' '
+      }
+    }
+    function giveAns4() {
+      counter++
+      if (counter % 2 !== 0) {
+        document.getElementById("plus4").src = "./assets/images/icon-minus.svg"
+        document.getElementById("ans4").innerHTML = 'You can get help in your challenges by joinig the discord community and asking questions, you will most likely meet memmbers that have solved the challenge in question'
+      } else {
+        document.getElementById("plus4").src = "./assets/images/icon-plus.svg"
+        document.getElementById("ans4").innerHTML = ' '
+      }
+    }
+
+  </script>
+</body>
+</html>
